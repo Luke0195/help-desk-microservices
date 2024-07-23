@@ -2,9 +2,10 @@ package br.com.helpdesk.userserviceapi.service;
 
 
 import br.com.helpdesk.userserviceapi.entity.User;
+import models.responses.UserResponse;
 
 public interface UserService {
 
-    User findById(String id);
+    UserResponse findById(String id);
 
 }

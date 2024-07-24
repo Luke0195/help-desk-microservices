@@ -20,7 +20,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build Package
-      run: cd hd-commonns-lib && mvn clean && mvn install
+      run: cd hd-commons-lib && mvn clean && mvn install
    
   buildms-user-service-api:
    needs: ['buid-hd-commons-lib']

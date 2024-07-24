@@ -49,7 +49,7 @@ jobs:
       with:
         gradle-version: '8.5'
     - name: Build with Gradle 8.5
-      run:  cd user-service-api  && gradle build
+      run:  cd user-service-api  && gradle && gradle build
 
   dependency-submission:
     needs: ['buildms-user-service-api']

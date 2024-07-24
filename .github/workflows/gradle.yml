@@ -19,9 +19,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Install Dependencies
-      run: mvn install
-    - name: Build with Maven
+    - name: Build Package
+      run: mvn clean && mvn install
    
   buildms-user-service-api:
    needs: ['buid-hd-commons-lib']

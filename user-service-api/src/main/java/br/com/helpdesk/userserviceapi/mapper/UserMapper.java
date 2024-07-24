@@ -15,8 +15,8 @@ public interface UserMapper {
 
 
 
-   @Mapping(target = "updated_at", source = "user.updatedAt")
-   @Mapping(target = "created_at", source = "user.createdAt")
-   @Mapping(target = "profiles", source = "user.profileEnum")
+   @Mapping(target = "updatedAt", source = "updatedAt")
+   @Mapping(target = "createdAt", source = "createdAt")
+   @Mapping(target = "profiles", source = "profileEnum")
    UserResponse parseEntityToUserMapper(User user);
 }

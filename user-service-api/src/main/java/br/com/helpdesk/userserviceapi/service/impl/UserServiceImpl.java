@@ -6,11 +6,10 @@ import br.com.helpdesk.userserviceapi.repository.UserRepository;
 import br.com.helpdesk.userserviceapi.service.UserService;
 
 import lombok.RequiredArgsConstructor;
+import models.exceptions.ResourceNotFoundException;
 import models.responses.UserResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -22,7 +21,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional(readOnly = true)
     public UserResponse findById(String id) {
-        User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User id not found!"));
+        User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User id not found!"));
         return userMapper.parseEntityToUserMapper(user);
     }
 

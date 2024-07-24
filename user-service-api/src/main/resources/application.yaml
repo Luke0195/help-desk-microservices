@@ -10,7 +10,9 @@ spring:
       port: 27017
       host: localhost
       auto-index-creation: true
-
-
-
+springdoc:
+  openapi:
+     title: 'User Service Api'
+     description: 'Component responsible for user management created on Formação Backend Expert with Valdir Cezar'
+     version: '1.0.0'
 
